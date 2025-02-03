@@ -1,0 +1,267 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  {
+    quote: "David transformed how we handle onboarding. Tasks that took 8 hours now take 20 minutes.",
+    author: "[Client Name]",
+    company: "[Company]"
+  },
+  {
+    quote: "Finally, tools that work for us. Our team is 3x more efficient.",
+    author: "[Client Name]",
+    company: "[Company]"
+  }
+];
+
+const problems = [
+  "Manual tasks eating up hours of productivity every week.",
+  "Teams stuck in silos, drowning in outdated tools or spreadsheets.",
+  "Costly bottlenecks and errors that hurt your bottom line.",
+  "No clarity on where to start with automation."
+];
+
+const benefits = [
+  {
+    icon: "⏱️",
+    title: "10+ Hours Saved Weekly",
+    description: "say goodbye to manual data entry"
+  },
+  {
+    icon: "💸",
+    title: "20-30% Lower Operational Costs",
+    description: "fewer errors, faster workflows"
+  },
+  {
+    icon: "🚀",
+    title: "Happier, More Productive Teams",
+    description: "tools they'll actually want to use"
+  },
+  {
+    icon: "📈",
+    title: "Scalable Systems",
+    description: "that grow with your business"
+  }
+];
+---
+
+<Layout title="Streamline Internal Processes & Boost Efficiency | David Ehrentreu">
+  <!-- Hero Section -->
+  <header class="gradient-bg min-h-screen flex items-center relative overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="section text-center z-10">
+      <h1 class="heading max-w-4xl mx-auto" data-aos="fade-up">
+        Ditch the Chaos. Streamline Your Operations, Boost Productivity, and Cut Costs.
+      </h1>
+      <p class="subheading max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        You're tired of wasted hours, messy workflows, and frustrated teams. Let's fix it.
+      </p>
+      <a href="#contact" class="btn-primary inline-block" data-aos="fade-up" data-aos-delay="200">
+        Book Your Free Efficiency Audit Today →
+      </a>
+    </div>
+  </header>
+
+  <!-- Problems Section -->
+  <section id="problems" class="bg-white relative overflow-hidden scroll-mt-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/50"></div>
+    <div class="section">
+      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+        "Why does everything feel harder than it should?"
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {problems.map((problem, index) => (
+          <div 
+            class="card backdrop-blur-sm bg-white/80" 
+            data-aos="fade-up" 
+            data-aos-delay={index * 100}
+          >
+            <p class="text-lg">{problem}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center mt-12 text-xl text-gray-600" data-aos="fade-up">
+        Sound familiar? You're not alone.
+      </p>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="gradient-bg relative overflow-hidden scroll-mt-20">
+    <div class="section">
+      <h2 class="heading text-center" data-aos="fade-up">
+        From Chaos to Clarity: Your Path to Effortless Efficiency
+      </h2>
+      <p class="subheading text-center max-w-3xl mx-auto" data-aos="fade-up">
+        I partner with growing businesses to eliminate repetitive work, simplify collaboration, and unlock time for what matters.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="card" data-aos="fade-up">
+          <div class="text-primary text-4xl mb-6">01</div>
+          <h3 class="text-2xl font-bold mb-4">Discover & Diagnose</h3>
+          <p class="text-gray-600 mb-6">I map your current workflows, pinpointing exactly where time and money leak away.</p>
+          <ul class="space-y-3">
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Full Process Audit
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Inefficiency Report
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Tool Recommendations
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-primary text-4xl mb-6">02</div>
+          <h3 class="text-2xl font-bold mb-4">Implement & Train</h3>
+          <p class="text-gray-600 mb-6">I handle the tech setup so you don't have to. No headaches, no guesswork.</p>
+          <ul class="space-y-3">
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Custom Tool Integration
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Team Training
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              30-Day Support
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-primary text-4xl mb-6">03</div>
+          <h3 class="text-2xl font-bold mb-4">Optimize & Scale</h3>
+          <p class="text-gray-600 mb-6">Keep systems running smoothly as you grow.</p>
+          <ul class="space-y-3">
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Monthly Management
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Proactive Updates
+            </li>
+            <li class="flex items-center text-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Ongoing Strategy
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="#contact" class="btn-primary" data-aos="fade-up">
+          Get Your Custom Roadmap →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="bg-white scroll-mt-20">
+    <div class="section">
+      <h2 class="heading text-center" data-aos="fade-up">
+        Reclaim Time, Reduce Stress, and Scale Smarter
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        {benefits.map((benefit, index) => (
+          <div 
+            class="card text-center group hover:scale-105 transition-transform duration-300" 
+            data-aos="fade-up" 
+            data-aos-delay={index * 100}
+          >
+            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">{benefit.icon}</div>
+            <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="gradient-bg scroll-mt-20">
+    <div class="section">
+      <h2 class="heading text-center mb-12" data-aos="fade-up">
+        What Clients Say
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {testimonials.map((testimonial, index) => (
+          <div 
+            class="card" 
+            data-aos="fade-up" 
+            data-aos-delay={index * 100}
+          >
+            <div class="text-primary text-6xl mb-4">"</div>
+            <p class="text-lg mb-6 italic">{testimonial.quote}</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full mr-4"></div>
+              <div>
+                <p class="font-semibold">{testimonial.author}</p>
+                <p class="text-gray-600">{testimonial.company}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="bg-gradient-to-br from-primary to-secondary text-white scroll-mt-20">
+    <div class="section text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white" data-aos="fade-up">
+        Stop Paying the "Inefficiency Tax." Let's Fix It.
+      </h2>
+      <a 
+        href="#contact" 
+        class="inline-block bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Book Your Free Audit – Only 3 Spots Left This Month →
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white">
+    <div class="section text-center">
+      <p class="mb-6">© 2024 David Ehrentreu | Process Automation Consultant</p>
+      <div class="space-x-8">
+        <a href="#contact" class="hover-underline">Contact</a>
+        <a href="/blog" class="hover-underline">Blog</a>
+        <a href="#" class="hover-underline">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</Layout>

@@ -1,0 +1,97 @@
+---
+const navItems = [
+  { label: "Problems", href: "/#problems" },
+  { label: "Services", href: "/services" },
+  { label: "Process", href: "/#process" },
+  { label: "Benefits", href: "/#benefits" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact", highlight: true }
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">DE</span>
+        <span class="hidden md:inline-block font-semibold">David Ehrentreu</span>
+      </a>
+
+      <!-- Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {navItems.map(item => (
+          <a 
+            href={item.href}
+            class={`hover-underline text-gray-600 hover:text-primary transition-colors ${
+              item.highlight ? 'btn-primary !py-2 !px-4 !text-white' : ''
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="mobile-menu-button" 
+        class="md:hidden text-gray-600 hover:text-primary"
+        aria-label="Toggle mobile menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div 
+      id="mobile-menu" 
+      class="hidden md:hidden pb-6 absolute left-0 right-0 top-20 bg-white/95 backdrop-blur-md shadow-lg"
+    >
+      <div class="px-4 space-y-4">
+        {navItems.map(item => (
+          <a 
+            href={item.href}
+            class={`block py-2 text-gray-600 hover:text-primary transition-colors ${
+              item.highlight ? 'btn-primary block text-center !py-2 !text-white' : ''
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!mobileMenuButton.contains(event.target as Node) && 
+          !mobileMenu.contains(event.target as Node) && 
+          !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

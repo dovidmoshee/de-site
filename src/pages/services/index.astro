@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  {
+    title: "Process Automation",
+    slug: "process-automation",
+    icon: "⚡",
+    description: "Streamline your workflows and eliminate manual tasks with custom automation solutions.",
+    benefits: [
+      "Reduce manual data entry by 90%",
+      "Automate repetitive tasks",
+      "Eliminate human errors",
+      "Real-time data synchronization"
+    ]
+  },
+  {
+    title: "Integration Solutions",
+    slug: "integration-solutions",
+    icon: "🔄",
+    description: "Connect your tools and systems for seamless data flow and improved efficiency.",
+    benefits: [
+      "Connect multiple platforms",
+      "Centralize your data",
+      "Real-time updates",
+      "Custom API integrations"
+    ]
+  },
+  {
+    title: "Workflow Optimization",
+    slug: "workflow-optimization",
+    icon: "📈",
+    description: "Analyze and optimize your business processes for maximum efficiency.",
+    benefits: [
+      "Process mapping & analysis",
+      "Bottleneck identification",
+      "Custom workflow design",
+      "Team training & support"
+    ]
+  }
+];
+---
+
+<Layout title="Services | Process Automation & Integration Solutions" description="Expert automation services to streamline your business operations and boost productivity.">
+  <main class="pt-32">
+    <div class="section !pt-0">
+      <h1 class="heading mb-4">Services</h1>
+      <p class="subheading max-w-3xl">
+        Transform your business operations with custom automation solutions tailored to your needs.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {services.map(service => (
+          <a 
+            href={`/services/${service.slug}`} 
+            class="card group hover:scale-105 transition-all duration-300"
+            data-aos="fade-up"
+          >
+            <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+              {service.icon}
+            </div>
+            <h2 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+              {service.title}
+            </h2>
+            <p class="text-gray-600 mb-6">{service.description}</p>
+            <ul class="space-y-2">
+              {service.benefits.slice(0, 2).map(benefit => (
+                <li class="flex items-center text-gray-600">
+                  <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+              Learn more →
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

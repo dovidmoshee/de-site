@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const features = [
+  {
+    title: "Custom Automation Solutions",
+    description: "Tailored automation workflows designed specifically for your business needs.",
+    icon: "⚙️"
+  },
+  {
+    title: "Data Entry Automation",
+    description: "Eliminate manual data entry with smart forms and automated data processing.",
+    icon: "📝"
+  },
+  {
+    title: "Document Processing",
+    description: "Automate document creation, processing, and management workflows.",
+    icon: "📄"
+  },
+  {
+    title: "Email & Communication",
+    description: "Automated email responses, notifications, and communication workflows.",
+    icon: "📧"
+  }
+];
+
+const benefits = [
+  "Save 10+ hours per week on manual tasks",
+  "Reduce errors by up to 90%",
+  "Improve team productivity and satisfaction",
+  "Scale operations without adding overhead",
+  "Real-time data accuracy and updates",
+  "Better customer experience through faster response times"
+];
+
+const process = [
+  {
+    step: 1,
+    title: "Discovery",
+    description: "We analyze your current processes and identify automation opportunities."
+  },
+  {
+    step: 2,
+    title: "Solution Design",
+    description: "Custom automation solution designed to meet your specific needs."
+  },
+  {
+    step: 3,
+    title: "Implementation",
+    description: "Seamless integration of automation tools and workflows."
+  },
+  {
+    step: 4,
+    title: "Training & Support",
+    description: "Comprehensive training and ongoing support for your team."
+  }
+];
+---
+
+<Layout 
+  title="Process Automation Services | David Ehrentreu" 
+  description="Transform your business operations with custom process automation solutions. Save time, reduce errors, and boost productivity."
+>
+  <main class="pt-32">
+    <!-- Hero -->
+    <div class="section !pt-0">
+      <div class="max-w-3xl">
+        <h1 class="heading mb-6">Process Automation Solutions</h1>
+        <p class="subheading">
+          Stop wasting time on repetitive tasks. Automate your workflows and focus on what matters most to your business.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="/#contact" class="btn-primary">
+            Get Started Today →
+          </a>
+          <a href="#process" class="btn-primary bg-white !text-primary hover:!text-white border-2 border-primary">
+            See How It Works
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section bg-gray-50">
+      <h2 class="heading text-center mb-12">Comprehensive Automation Services</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        {features.map(feature => (
+          <div class="card" data-aos="fade-up">
+            <div class="text-4xl mb-4">{feature.icon}</div>
+            <h3 class="text-xl font-bold mb-2">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="heading mb-12">Transform Your Business Operations</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {benefits.map(benefit => (
+            <div class="flex items-center space-x-3 text-left" data-aos="fade-up">
+              <svg class="w-6 h-6 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              <span class="text-gray-700">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div id="process" class="section bg-gray-50">
+      <h2 class="heading text-center mb-12">Our Process</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          {process.map(({ step, title, description }) => (
+            <div class="card relative" data-aos="fade-up">
+              <div class="text-4xl font-bold text-primary/10 absolute top-4 right-4">
+                {step}
+              </div>
+              <h3 class="text-xl font-bold mb-2">{title}</h3>
+              <p class="text-gray-600">{description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="section bg-gradient-to-br from-primary to-secondary text-white text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Business?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Book your free consultation today and discover how automation can transform your operations.
+      </p>
+      <a href="/#contact" class="inline-block bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
+        Schedule Your Free Consultation →
+      </a>
+    </div>
+  </main>
+</Layout>
