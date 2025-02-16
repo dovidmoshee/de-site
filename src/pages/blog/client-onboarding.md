@@ -83,7 +83,7 @@ Consider using tools like [Motion.io](https://motion.io/) to track these metrics
 
 Once you've identified these problem areas, the next move is choosing the right tools to streamline and optimize these processes.
 
-## 4 Key Tools for Automation
+## 3 Key Tools for Automation
 
 Once you've outlined your current onboarding workflow, it's time to bring in tools that can handle repetitive tasks. Below are four platforms that can work together to simplify and enhance your onboarding process.
 
@@ -105,14 +105,6 @@ Zapier acts as the glue connecting your tools, eliminating the need for manual d
 ### Notion: Centralized Client Dashboard
 
 Notion keeps all your client and project information in one place. Its database features allow you to create custom templates and views, ensuring everything stays consistent and easy to find. You can also build client portals for document sharing, [project updates](https://shapo.io/recent-updates), and collaboration, making onboarding smoother for everyone involved.
-
-### [Shapo](https://shapo.io/): Collect Client Reviews
-
-![Shapo](https://mars-images.imgix.net/seobot/screenshots/shapo.io-32d05be0a36e4dd2dd38245ca0ffda3d-2025-02-02.jpg?auto=compress)
-
-Shapo helps you gather client feedback and build trust early on. It simplifies collecting reviews with tools like [video testimonials](https://shapo.io/video-testimonials), branded forms, and [automated email campaigns](https://help.shapo.io/en/articles/9560914-email-campaigns-webhook-automation). The 'Wall of Love' feature even lets you display glowing reviews on your website to boost credibility right from the start.
-
-These tools can work together to help you automate your onboarding process step by step, creating a smoother experience for both you and your clients.
 
 ## 5 Steps to Set Up Automation
 
